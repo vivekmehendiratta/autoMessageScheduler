@@ -35,7 +35,7 @@ class AutoMessage():
 def job():
     auto_message = AutoMessage(message='Please Stand Up and Drink Water',
                                language='english', numbers='9876543210')
-    auto_response = anki_message.sendResponse()
+    auto_response = auto_message.sendResponse()
     print(auto_response.text)
 
 
