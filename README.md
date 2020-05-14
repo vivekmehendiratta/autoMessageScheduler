@@ -2,6 +2,7 @@
 
     Python 3.7.*
     requests package
+    apshechulder
    
 # Motivation
 
@@ -16,5 +17,5 @@ Learning Outcome:
 
 The repository contains 2 python files:
     
-    data.py
+    message_data.py
     autoMessaging.py
