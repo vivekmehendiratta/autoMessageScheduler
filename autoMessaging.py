@@ -2,6 +2,7 @@
 from message_data import *
 import requests
 from datetime import datetime
+from time import sleep
 from apscheduler.schedulers.blocking import BlockingScheduler
 
 
@@ -37,25 +38,10 @@ def job():
     auto_response = anki_message.sendResponse()
     print(auto_response.text)
 
-    time = datetime.now()
-    if(time.hour >= 22):
-        scheduler.remove_job('water_reminder')
 
-
-global scheduler
-scheduler = BlockingScheduler()
-print('scheduler instantiated')
-
-scheduler.add_job(job, 'interval', hours=1, id='water_reminder')
-print('job added')
-
-start_job = False
 while 1:
+    hour_list = list(range(10, 23))
     now = datetime.now()
-    if(now.hour == 15):
-        start_job = True
-        break
-
-if(start_job):
-    print('Starting the scheduler')
-    scheduler.start()
+    if((now.hour in hour_list) & (now.minute == 0)):
+        job()
+        sleep(70)
