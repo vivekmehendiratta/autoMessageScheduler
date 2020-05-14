@@ -16,5 +16,5 @@ Learning Outcome:
 
 The repository contains 2 python files:
     
-    data.py
+    message_data.py
     autoMessaging.py
