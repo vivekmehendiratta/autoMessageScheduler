@@ -59,9 +59,3 @@ while 1:
 if(start_job):
     print('Starting the scheduler')
     scheduler.start()
-
-
-# parul_message = AutoMessage(message='Aur Billi, kya haal hai',
-#                             language='english', numbers='9953532787')
-# parul_response = parul_message.sendResponse()
-# print(parul_response.text)
