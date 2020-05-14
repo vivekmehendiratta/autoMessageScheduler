@@ -2,7 +2,6 @@
 
     Python 3.7.*
     requests package
-    apshechulder
    
 # Motivation
 
